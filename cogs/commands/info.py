@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 import discord, datetime, time, platform
 
 from discord.commands import slash_command, Option
