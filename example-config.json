@@ -1,0 +1,7 @@
+{
+    "token":"",
+    "db-host":"localhost",
+    "db-username":"username",
+    "db-password":"password",
+    "db-database":"lammybot"
+}
