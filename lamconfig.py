@@ -9,9 +9,3 @@ class LamConfig():
         password = cfg["db-password"],
         database = cfg["db-database"]
     )
-
-    def write():
-        cfgout = json.dumps(LamConfig.cfg, indent=4, sort_keys=True)
-        textfile = open("config.json", "w")
-        textfile.write(cfgout)
-        textfile.close()

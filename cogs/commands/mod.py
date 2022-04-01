@@ -26,7 +26,7 @@ class ModCommands(commands.Cog):
         db_cursor = LamConfig.database.cursor()
         db_cursor.execute(f"SELECT public_log_id FROM guilds WHERE id = '{ctx.guild.id}'")
         plid = db_cursor.fetchone()
-        await ctx.guild.get_channel(int(plid)).send(embed = embed)
+        await ctx.guild.get_channel(int(plid[0])).send(embed = embed)
 
     @slash_command(name="ban")
     @commands.has_permissions(ban_members = True)
@@ -42,7 +42,7 @@ class ModCommands(commands.Cog):
         db_cursor = LamConfig.database.cursor()
         db_cursor.execute(f"SELECT public_log_id FROM guilds WHERE id = '{ctx.guild.id}'")
         plid = db_cursor.fetchone()
-        await ctx.guild.get_channel(int(plid)).send(embed = embed)
+        await ctx.guild.get_channel(int(plid[0])).send(embed = embed)
 
     @slash_command(name="unban")
     @commands.has_permissions(ban_members = True)
@@ -58,4 +58,4 @@ class ModCommands(commands.Cog):
         db_cursor = LamConfig.database.cursor()
         db_cursor.execute(f"SELECT public_log_id FROM guilds WHERE id = '{ctx.guild.id}'")
         plid = db_cursor.fetchone()
-        await ctx.guild.get_channel(int(plid)).send(embed = embed)
+        await ctx.guild.get_channel(int(plid[0])).send(embed = embed)
